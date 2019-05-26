@@ -24,24 +24,24 @@ public class ConversionFromNumToWords {
 			return "minus " + numberToWord(Integer.parseInt(numberStr));
 		}
 		
-		// check if number is divisible by 1 million
+		// check million
 		if ((number / 1000000) > 0) {
 			englishword  += numberToWord(number / 1000000) + " million ";
 			number %= 1000000;
 		}
-		// check if number is divisible by 1 thousand
+		// check  thousand
 		if ((number / 1000) > 0) {
 			englishword += numberToWord(number / 1000) + " thousand ";
 			number %= 1000;
 		}
-		// check if number is divisible by 1 hundred
+		// check hundred
 		if ((number / 100) > 0) {
 			englishword += numberToWord(number / 100) + " hundred ";
 			number %= 100;
 		}
 
 		if (number > 0) {
-			// check if number is within teens
+			// check teens
 			if (number < 20) {
 				englishword += unitsArray[number];
 			} else {
