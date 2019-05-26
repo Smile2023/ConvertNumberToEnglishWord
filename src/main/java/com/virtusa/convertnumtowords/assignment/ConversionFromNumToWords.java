@@ -43,13 +43,11 @@ public class ConversionFromNumToWords {
 		if (number > 0) {
 			// check if number is within teens
 			if (number < 20) {
-				// fetch the appropriate value from unit array
 				englishword += unitsArray[number];
 			} else {
-				// fetch the appropriate value from tens array
 				englishword += tensArray[number / 10];
 				if ((number % 10) > 0) {
-					englishword += "-" + unitsArray[number % 10];
+					englishword += " " + unitsArray[number % 10];
 				}
 			}
 		}
