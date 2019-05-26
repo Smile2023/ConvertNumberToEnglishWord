@@ -17,7 +17,7 @@ public class ConversionFromNumToWords {
 		if (number == 0) {
 			return "zero";
 		}
-		// add minus before conversion if the number is less than 0
+		// add minus before conversion<0
 		if (number < 0) {
 			String numberStr = "" + number;
 			numberStr = numberStr.substring(1);
